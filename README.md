@@ -8,6 +8,19 @@
 🔹<a  href="https://github.com/HikaruEgashira/gh-readme/issues">Request Feature</a>
 </h3>
 
+
+```bash
+$ gh readme --help
+README.md を表示します
+
+Usage:
+  gh-readme [flags]
+
+Flags:
+  -h, --help          help for gh-readme
+  -r, --repo string   リポジトリ名
+```
+
 ## Usage
 
 ```bash
