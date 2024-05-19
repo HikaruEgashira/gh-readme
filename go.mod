@@ -1,6 +1,6 @@
 module github.com/HikaruEgashira/gh-readme
 
-go 1.22.2
+go 1.21.0
 
 require (
 	github.com/cli/go-gh/v2 v2.9.0
