@@ -18,6 +18,15 @@ var rootCmd = &cobra.Command{
 	Long:  `README.md を表示します`,
 	Run: func(cmd *cobra.Command, args []string) {
 		repo := cmd.Flag("repo").Value.String()
+		force := cmd.Flag("force").Value.String()
+
+		if force == "true" {
+			// remove directory
+			err := os.RemoveAll("workspaces/" + repo)
+			if err != nil {
+				log.Fatal(err)
+			}
+		}
 
 		// check if directory exists
 		_, err := os.Stat("workspaces/" + repo)
@@ -48,4 +57,5 @@ func Execute() {
 func init() {
 	rootCmd.Flags().StringP("repo", "r", "", "リポジトリ名")
 	rootCmd.MarkFlagRequired("repo")
+	rootCmd.Flags().BoolP("force", "f", false, "README.md を強制的に取得します")
 }
