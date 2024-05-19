@@ -32,7 +32,7 @@ var rootCmd = &cobra.Command{
 		// read README.md
 		readme, err := os.ReadFile("workspaces/" + repo + "/README.md")
 		if err != nil {
-			log.Fatal(err)
+			fmt.Println("README.md not found")
 		}
 		fmt.Println(string(readme))
 	},
