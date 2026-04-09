@@ -1,9 +1,9 @@
 module github.com/HikaruEgashira/gh-readme
 
-go 1.21.0
+go 1.23.0
 
 require (
-	github.com/cli/go-gh/v2 v2.11.1
+	github.com/cli/go-gh/v2 v2.12.1
 	github.com/spf13/cobra v1.8.0
 )
 
